@@ -55,3 +55,4 @@ freeline/
 freeline_project_description.json
 
 # Commits validator
+node_module/*
