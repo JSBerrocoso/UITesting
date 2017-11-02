@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android'
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
   buildToolsVersion rootProject.ext.buildToolsVersion
+
   defaultConfig {
     applicationId "com.jsbs.sample.uitesting.app"
     minSdkVersion rootProject.ext.minSdkVersion
@@ -11,6 +12,7 @@ android {
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
   }
   buildTypes {
     release {
@@ -23,6 +25,12 @@ android {
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
 
+  // Test dependencies
+  // Android JUnit Runner
+  androidTestCompile "com.android.support.test:runner:$rootProject.ext.runnerVersion"
+  // JUnit4 Rules
+  androidTestCompile "com.android.support.test:rules:$rootProject.ext.rulesVersion"
+  // Espresso Core
   androidTestCompile("com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoVersion", {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
