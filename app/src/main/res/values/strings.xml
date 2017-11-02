@@ -15,4 +15,11 @@
     completions."
   </string>
   <string name="action_create_account">Not account yet? Create one</string>
+  <string name="action_success">Success!!!</string>
+  <string name="action_error">Error!!</string>
+  <string name="title_activity_success"/>
+  <string name="title_activity_error"/>
+  <string name="text_login_successful">Login OK!! :)</string>
+  <string name="text_login_error">Login ERROR :(</string>
+
 </resources>

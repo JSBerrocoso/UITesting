@@ -24,6 +24,18 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+
+    <activity
+        android:name=".SuccessActivity"
+        android:label="@string/title_activity_success"
+        android:theme="@style/AppTheme.NoTitle"
+        />
+
+    <activity
+        android:name=".ErrorActivity"
+        android:label="@string/title_activity_error"
+        android:theme="@style/AppTheme.NoTitle"
+        />
   </application>
 
 </manifest>
