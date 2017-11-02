@@ -1,5 +1,21 @@
 package com.jsbs.sample.uitesting.app.login;
 
+/**
+ * Copyright 2017 JSBerrocoso
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.ViewInteraction;
@@ -44,7 +60,8 @@ import static org.hamcrest.Matchers.is;
     // Find Textview with text "Not account yet? Create one".
     ViewInteraction appCompatTextView = onView(
         allOf(withId(R.id.create_account), withText("Not account yet? Create one"), childAtPosition(
-            allOf(withId(R.id.email_login_form), childAtPosition(withId(R.id.scroll_login_form), 0)), 3)));
+            allOf(withId(R.id.email_login_form),
+                childAtPosition(withId(R.id.scroll_login_form), 0)), 3)));
     appCompatTextView.perform(scrollTo(), click());
 
     // Check if the SignUp screen is displayed
@@ -57,10 +74,9 @@ import static org.hamcrest.Matchers.is;
   @Test public void clickSignInButtonAfterFillingSignInForm_showProgressAndSuccessScreen() {
 
     // Find email editext and set data
-    ViewInteraction viewInteractionEmail = onView(allOf(withId(R.id.email),
-        childAtPosition(
-            childAtPosition(withClassName(is("android.support.design.widget.TextInputLayout")), 0),
-            0)));
+    ViewInteraction viewInteractionEmail = onView(allOf(withId(R.id.email), childAtPosition(
+        childAtPosition(withClassName(is("android.support.design.widget.TextInputLayout")), 0),
+        0)));
     viewInteractionEmail.perform(scrollTo(), click());
     viewInteractionEmail.perform(scrollTo(), replaceText(EMAIL), closeSoftKeyboard());
 
@@ -92,5 +108,4 @@ import static org.hamcrest.Matchers.is;
             childAtPosition(childAtPosition(withId(android.R.id.content), 0), 0), isDisplayed()));
     viewInteractionSuccessView.check(matches(withText("Success!!!")));
   }
-
 }
