@@ -1,4 +1,6 @@
-package com.jsbs.sample.uitesting.app
+package com.jsbs.sample.uitesting.app.messages
+
+import com.jsbs.sample.uitesting.app.BaseActivity
 
 /**
  * Created by patxi on 02/11/2017.

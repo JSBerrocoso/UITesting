@@ -1,6 +1,7 @@
-package com.jsbs.sample.uitesting.app
+package com.jsbs.sample.uitesting.app.messages
 
 import android.os.Bundle
+import com.jsbs.sample.uitesting.app.BaseActivity
 import com.jsbs.sample.uitesting.app.R.layout
 
 /**

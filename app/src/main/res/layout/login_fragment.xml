@@ -23,7 +23,7 @@
       />
 
   <ScrollView
-      android:id="@+id/login_form"
+      android:id="@+id/scroll_login_form"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       >
