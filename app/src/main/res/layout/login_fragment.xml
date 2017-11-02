@@ -17,7 +17,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginBottom="8dp"
-      android:visibility="gone"
+      android:visibility="invisible"
       tools:visibility="visible"
       style="?android:attr/progressBarStyleLarge"
       />
@@ -80,6 +80,20 @@
           android:text="@string/action_sign_in"
           android:textStyle="bold"
           style="@style/Widget.AppCompat.Button"
+          />
+
+
+      <TextView
+          android:id="@+id/create_account"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:gravity="center"
+          android:text="@string/action_create_account"
+          android:textStyle="bold"
+          style="@style/Widget.AppCompat.Button"
+          android:background="@android:color/transparent"
+          android:textAllCaps="false"
           />
 
     </LinearLayout>
