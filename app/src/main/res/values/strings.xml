@@ -1,6 +1,6 @@
 <resources>
   <string name="app_name">UITesting</string>
-  <string name="title_activity_login">Inicia sesión</string>
+  <string name="title_activity_login">Sign In</string>
 
   <!-- Strings related to login -->
   <string name="prompt_email">Email</string>
@@ -11,9 +11,7 @@
   <string name="error_invalid_password">This password is too short</string>
   <string name="error_incorrect_password">This password is incorrect</string>
   <string name="error_field_required">This field is required</string>
-  <string name="permission_rationale">"Contacts permissions are needed for providing email
-    completions."
-  </string>
+
   <string name="action_create_account">Not account yet? Create one</string>
   <string name="action_success">Success!!!</string>
   <string name="action_error">Error!!</string>
@@ -21,5 +19,15 @@
   <string name="title_activity_error"/>
   <string name="text_login_successful">Login OK!! :)</string>
   <string name="text_login_error">Login ERROR :(</string>
+  <string name="action_create_account_button">Create account</string>
+
+
+  <string name="hint_first_name">First name</string>
+  <string name="hint_last_name">Last name</string>
+  <string name="hint_email">Email</string>
+  <string name="hint_password">Password</string>
+  <string name="sign_up_button_text">Sign Up</string>
+  <string name="title_activity_signup">Create your account</string>
+
 
 </resources>

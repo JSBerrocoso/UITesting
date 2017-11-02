@@ -36,7 +36,7 @@ class LoginFragment : BaseFragment(), LoginContract.View, OnClickListener {
 
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
       savedInstanceState: Bundle?): View? {
-    var view = inflater?.inflate(R.layout.login_fragment, container, false)
+    val view = inflater.inflate(R.layout.login_fragment, container, false)
 
     emailEditext = view.findViewById(R.id.email)
     passEditext = view.findViewById(R.id.password)
@@ -46,7 +46,7 @@ class LoginFragment : BaseFragment(), LoginContract.View, OnClickListener {
     signButton = view.findViewById(R.id.email_sign_in_button)
     signButton.setOnClickListener(this)
 
-    return view;
+    return view
   }
 
   override fun onClick(viewOnClick: View) {
