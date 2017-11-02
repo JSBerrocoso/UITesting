@@ -2,6 +2,8 @@ package com.jsbs.sample.uitesting.app
 
 import android.content.Intent
 import android.support.v4.app.Fragment
+import com.jsbs.sample.uitesting.app.messages.ErrorActivity
+import com.jsbs.sample.uitesting.app.messages.MessageActivity
 import com.jsbs.sample.uitesting.app.signup.SignUpActivity
 
 /**
