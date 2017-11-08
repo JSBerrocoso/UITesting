@@ -29,6 +29,12 @@ This Application is based on four Activities:
 * ``ErrorActivity`` showing a error message.
 
 
+
+## Code style
+
+Here you can download and install the java codestyle.
+https://github.com/JSBerrocoso/java-code-styles
+
 ## Documentation
 There are some links which can be useful to finish these tasks:
 
