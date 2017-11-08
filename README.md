@@ -15,11 +15,17 @@ This repository contains an Android application to do login or signin in a sampl
 
 This Application is based on four Activities:
 * ``LoginActivity`` showing a form with two editext to complete with data.
+
 ![login_screen][login_screen]
+
 * ``SignUpActivity`` showing a form with several fields to complete with data.
+
 ![signin_screen][signin_screen]
+
 * ``MessageActivity`` showing a success message.
+
 ![success_screen][success_screen]
+
 * ``ErrorActivity`` showing a error message.
 
 
