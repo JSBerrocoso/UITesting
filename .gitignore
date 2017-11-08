@@ -40,7 +40,7 @@ captures/
 .idea/dictionaries
 .idea/libraries
 .idea/misc.xml
-.idea/*
+.idea/
 
 # Keystore files
 *.jks
@@ -58,3 +58,6 @@ freeline_project_description.json
 
 # Commits validator
 node_module/*
+app/libs/
+app/sampledata/
+app/src/main/res/drawable/
