@@ -1,4 +1,4 @@
-package com.jsbs.sample.uitesting.app.login;
+package com.jsbs.sample.uitesting.app;
 
 /**
  * Copyright 2017 JSBerrocoso
@@ -22,8 +22,7 @@ import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
-import com.jsbs.sample.uitesting.app.BaseActivityTest;
-import com.jsbs.sample.uitesting.app.R;
+import com.jsbs.sample.uitesting.app.login.LoginActivity;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;

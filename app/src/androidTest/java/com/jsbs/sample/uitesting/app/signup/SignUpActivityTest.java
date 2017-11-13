@@ -45,8 +45,7 @@ import static org.hamcrest.Matchers.is;
   private static final String EMAIL_NAME_VALUE = "eldelospalotes@gmail.com";
   private static final String PASS_NAME_VALUE = "fakepass";
 
-  @Rule public ActivityTestRule<SignUpActivity> mActivityTestRule =
-      new ActivityTestRule<>(SignUpActivity.class);
+  @Rule public ActivityTestRule<SignUpActivity> mActivityTestRule = new ActivityTestRule<>(SignUpActivity.class);
 
   @Test public void clickSignUpButtonAfterFillSignUpForm_showProgressAndSuccessScreen() {
 
