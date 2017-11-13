@@ -20,6 +20,13 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+
+  // More info https://kotlinlang.org/docs/reference/using-gradle.html
+  sourceSets {
+    main.java.srcDirs += ['src/main/kotlin', 'src/main/java']
+    test.java.srcDirs += ['src/test/java','src/test/kotlin']
+    androidTest.java.srcDirs += ['src/androidTest/kotlin', 'src/androidTest/java']
+  }
 }
 
 dependencies {
