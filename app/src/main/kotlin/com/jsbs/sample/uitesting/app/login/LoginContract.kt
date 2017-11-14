@@ -21,11 +21,14 @@ interface LoginContract {
     fun showProgress(showProgress: Boolean)
     fun showLoginSuccessScreen()
     fun showCreateAccountScreen()
+    fun showInvalidCredentialsViews()
+    fun showInvalidEmail()
+    fun showInvalidPassword()
+    fun enableClickableViews(showProgress: Boolean)
   }
 
   interface UserActionListener {
-
-    fun loginButtonClick()
     fun createAccountButtonClick();
+    fun loginButtonClick(name: String, password: String)
   }
 }

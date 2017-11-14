@@ -69,16 +69,17 @@ class LoginFragment : BaseFragment(), LoginContract.View, OnClickListener {
         actionListener.createAccountButtonClick()
       }
       R.id.email_sign_in_button -> {
-        actionListener.loginButtonClick()
+        actionListener.loginButtonClick(emailEditext.text.toString(), passEditext.text.toString())
       }
     }
   }
 
-  override fun showProgress(showProgress: Boolean) {
+  override fun showProgress(show: Boolean) {
     when {
-      showProgress -> progressBar.visibility = View.VISIBLE
+      show -> progressBar.visibility = View.VISIBLE
       else -> progressBar.visibility = View.INVISIBLE
     }
+    enableClickableViews(!show)
   }
 
   override fun showLoginSuccessScreen() {
@@ -87,6 +88,23 @@ class LoginFragment : BaseFragment(), LoginContract.View, OnClickListener {
 
   override fun showCreateAccountScreen() {
     navigateToCreateAccountScreen()
+  }
+
+  override fun showInvalidEmail() {
+    emailEditext.error = getString(R.string.error_invalid_email)
+  }
+
+  override fun showInvalidPassword() {
+    passEditext.error = getString(R.string.error_invalid_password)
+  }
+
+  override fun showInvalidCredentialsViews() {
+    emailEditext.error = getString(R.string.error_invalid_email)
+    passEditext.error = getString(R.string.error_invalid_password)
+  }
+
+  override fun enableClickableViews(enableView: Boolean) {
+    signButton.isEnabled = enableView
   }
 
 }

@@ -18,20 +18,38 @@ package com.jsbs.sample.uitesting.app.login
 
 import android.os.Handler
 
-class LoginPresenter(var loginView: LoginContract.View) : LoginContract.UserActionListener {
+class LoginPresenter(private var loginView: LoginContract.View) : LoginContract.UserActionListener {
 
-  override fun loginButtonClick() {
-    loginView.showProgress(true)
+  override fun loginButtonClick(name: String, password: String) {
 
-    val handler = Handler()
-    handler.postDelayed({
-      loginView.showProgress(false)
-      loginView.showLoginSuccessScreen()
-    }, 3000)
+    if (isValidCredentials(name, password)) {
+      loginView.showProgress(true)
+
+      val handler = Handler()
+      handler.postDelayed({
+        loginView.showProgress(false)
+        loginView.showLoginSuccessScreen()
+      }, 3000)
+    } else {
+      loginView.showInvalidCredentialsViews()
+    }
   }
 
   override fun createAccountButtonClick() {
     loginView.showCreateAccountScreen()
   }
 
+  private fun isValidCredentials(name: String, password: String): Boolean {
+    var result = true
+    if (name.isEmpty()) {
+      result = false
+      loginView.showInvalidEmail()
+    } else if (password.isEmpty()) {
+      result = false
+      loginView.showInvalidPassword()
+    }
+    return result;
+  }
 }
+
+
