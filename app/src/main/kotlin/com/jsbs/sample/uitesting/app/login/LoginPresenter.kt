@@ -18,6 +18,7 @@
 package com.jsbs.sample.uitesting.app.login
 
 import android.os.Handler
+import com.jsbs.sample.uitesting.app.TIMES
 
 class LoginPresenter(private var loginView: LoginContract.View) : LoginContract.UserActionListener {
 
@@ -30,7 +31,7 @@ class LoginPresenter(private var loginView: LoginContract.View) : LoginContract.
       handler.postDelayed({
         loginView.showProgress(false)
         loginView.showLoginSuccessScreen()
-      }, 3000)
+      }, TIMES.SLEEP_TIME_MILLIS)
     } else {
       loginView.showInvalidCredentialsViews()
     }

@@ -35,6 +35,7 @@ import android.support.test.runner.AndroidJUnit4
 import android.view.View
 import com.jsbs.sample.uitesting.app.BaseActivityTest
 import com.jsbs.sample.uitesting.app.R
+import com.jsbs.sample.uitesting.app.TIMES
 import org.hamcrest.Matchers.`is`
 import org.hamcrest.Matchers.allOf
 import org.junit.Before
@@ -106,7 +107,7 @@ class LoginActivityTest : BaseActivityTest() {
     // The recommended way to handle such scenarios is to use Espresso idling resources:
     // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
     try {
-      Thread.sleep(3000)
+      Thread.sleep(TIMES.SLEEP_TIME_MILLIS)
     } catch (e: InterruptedException) {
       e.printStackTrace()
     }
@@ -120,8 +121,7 @@ class LoginActivityTest : BaseActivityTest() {
   }
 
   companion object {
-
-    private val EMAIL = "santiago.berrocoso@gigigo.com"
-    private val PASS = "fakepass1"
+    val EMAIL = "santiago.berrocoso@gigigo.com"
+    val PASS = "fakepass1"
   }
 }

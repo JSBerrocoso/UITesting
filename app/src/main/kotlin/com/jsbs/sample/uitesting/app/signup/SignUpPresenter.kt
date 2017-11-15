@@ -18,6 +18,7 @@
 package com.jsbs.sample.uitesting.app.signup
 
 import android.os.Handler
+import com.jsbs.sample.uitesting.app.TIMES
 
 class SignUpPresenter(var signUpView: SignUpContract.View) : SignUpContract.UserActionListener {
   override fun signUpButtonClick() {
@@ -27,7 +28,7 @@ class SignUpPresenter(var signUpView: SignUpContract.View) : SignUpContract.User
     handler.postDelayed({
       signUpView.showProgress(false)
       signUpView.showSignUpSuccessScreen()
-    }, 3000)
+    }, TIMES.SLEEP_TIME_MILLIS)
   }
 
 }

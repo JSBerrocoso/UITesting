@@ -15,18 +15,30 @@
  *
  */
 
-package com.jsbs.sample.uitesting.app.login
+package com.jsbs.sample.uitesting.app.login.screen
 
-import android.os.Bundle
-import com.jsbs.sample.uitesting.app.BaseActivity
-import com.jsbs.sample.uitesting.app.R.layout
+import com.agoda.kakao.KButton
+import com.agoda.kakao.KEditText
+import com.agoda.kakao.KTextView
+import com.agoda.kakao.Screen
+import com.jsbs.sample.uitesting.app.R
 
-class LoginActivity : BaseActivity() {
+class LoginScreen : Screen<LoginScreen>() {
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(layout.activity_login)
-
-    startFragment(LoginFragment.newInstance())
+  val email = KEditText {
+    withId(R.id.email)
   }
+
+  val password = KEditText {
+    withId(R.id.password)
+  }
+
+  val loginButton = KButton {
+    withId(R.id.email_sign_in_button)
+  }
+
+  val createButton = KTextView {
+    withId(R.id.create_account)
+  }
+
 }

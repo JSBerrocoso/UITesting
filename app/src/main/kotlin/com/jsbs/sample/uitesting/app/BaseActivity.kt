@@ -20,12 +20,19 @@ package com.jsbs.sample.uitesting.app
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 
-open class BaseActivity : AppCompatActivity(){
+open class BaseActivity : AppCompatActivity() {
 
   fun startFragment(fragment: Fragment) {
     val fragmentManager = supportFragmentManager
     val fragmentTransaction = fragmentManager.beginTransaction()
     fragmentTransaction.replace(R.id.container, fragment)
     fragmentTransaction.commit()
+  }
+}
+
+class TIMES {
+  companion object {
+    @JvmStatic
+    val SLEEP_TIME_MILLIS: Long = 3000
   }
 }

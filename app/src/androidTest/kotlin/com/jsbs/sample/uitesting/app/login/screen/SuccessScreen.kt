@@ -15,18 +15,16 @@
  *
  */
 
-package com.jsbs.sample.uitesting.app.login
+package com.jsbs.sample.uitesting.app.login.screen
 
-import android.os.Bundle
-import com.jsbs.sample.uitesting.app.BaseActivity
-import com.jsbs.sample.uitesting.app.R.layout
+import com.agoda.kakao.KTextView
+import com.agoda.kakao.Screen
+import com.jsbs.sample.uitesting.app.R.id
 
-class LoginActivity : BaseActivity() {
+class SuccessScreen : Screen<SuccessScreen>() {
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(layout.activity_login)
-
-    startFragment(LoginFragment.newInstance())
+  val title = KTextView {
+    withId(id.title_success_screen)
   }
+
 }
