@@ -17,9 +17,10 @@
 
 package com.jsbs.sample.uitesting.app.login
 
+import android.support.test.espresso.matcher.ViewMatchers.isDisplayed
 import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
-import com.jsbs.sample.uitesting.app.TIMES
+import com.jsbs.sample.uitesting.app.FakeConstants
 import com.jsbs.sample.uitesting.app.login.screen.LoginScreen
 import com.jsbs.sample.uitesting.app.login.screen.SuccessScreen
 import org.junit.Rule
@@ -37,22 +38,24 @@ class LoginActivityKakaoTest {
 
   val successScreen = SuccessScreen()
 
+  val signUpScreen = LoginScreen()
+
   @Test
   fun clickSignInButtonAfterFillingSignInForm_showProgressAndSuccessScreen() {
 
     loginScreen {
       email {
-        replaceText(LoginActivityTest.EMAIL)
+        replaceText(FakeConstants.EMAIL_OK)
       }
       password {
-        replaceText(LoginActivityTest.PASS)
+        replaceText(FakeConstants.PASS_OK)
       }
 
       loginButton {
         click()
       }
 
-      Thread.sleep(TIMES.SLEEP_TIME_MILLIS)
+      Thread.sleep(FakeConstants.SLEEP_TIME_MILLIS)
     }
 
     successScreen {
@@ -60,5 +63,19 @@ class LoginActivityKakaoTest {
     }
   }
 
+  @Test
+  fun clickSignUpButton_openSignUpScreen() {
+    loginScreen {
+      createButton {
+        click()
+      }
+    }
+
+    signUpScreen {
+      this {
+        isDisplayed()
+      }
+    }
+  }
 
 }
