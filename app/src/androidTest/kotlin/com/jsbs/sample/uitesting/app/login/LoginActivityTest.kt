@@ -34,14 +34,15 @@ import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
 import android.view.View
 import com.jsbs.sample.uitesting.app.BaseActivityTest
+import com.jsbs.sample.uitesting.app.FakeConstants
 import com.jsbs.sample.uitesting.app.R
-import com.jsbs.sample.uitesting.app.TIMES
 import org.hamcrest.Matchers.`is`
 import org.hamcrest.Matchers.allOf
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.util.jar.Pack200.Packer.PASS
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)
@@ -85,7 +86,7 @@ class LoginActivityTest : BaseActivityTest() {
                 withClassName(`is`("android.support.design.widget.TextInputLayout")), 0),
             0)))
     viewInteractionEmail.perform(scrollTo(), click())
-    viewInteractionEmail.perform(scrollTo(), replaceText(EMAIL), closeSoftKeyboard())
+    viewInteractionEmail.perform(scrollTo(), replaceText(FakeConstants.EMAIL_OK), closeSoftKeyboard())
 
     // Find email password and set data
     val viewInteractionPassword = onView(
@@ -107,7 +108,7 @@ class LoginActivityTest : BaseActivityTest() {
     // The recommended way to handle such scenarios is to use Espresso idling resources:
     // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
     try {
-      Thread.sleep(TIMES.SLEEP_TIME_MILLIS)
+      Thread.sleep(FakeConstants.SLEEP_TIME_MILLIS)
     } catch (e: InterruptedException) {
       e.printStackTrace()
     }
@@ -118,10 +119,5 @@ class LoginActivityTest : BaseActivityTest() {
             childAtPosition(withId(android.R.id.content), 0), 0),
             isDisplayed()))
     viewInteractionSuccessView.check(matches(withText("Success!!!")))
-  }
-
-  companion object {
-    val EMAIL = "santiago.berrocoso@gigigo.com"
-    val PASS = "fakepass1"
   }
 }

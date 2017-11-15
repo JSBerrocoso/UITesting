@@ -30,9 +30,17 @@ open class BaseActivity : AppCompatActivity() {
   }
 }
 
-class TIMES {
+class FakeConstants {
   companion object {
     @JvmStatic
     val SLEEP_TIME_MILLIS: Long = 3000
+    @JvmStatic
+    val EMAIL_OK = "santiago.berrocoso@gigigo.com"
+    @JvmStatic
+    val PASS_OK = "OKfakepass1"
+    @JvmStatic
+    val EMAIL_KO = "ko_santiago.berrocoso@gigigo.com"
+    @JvmStatic
+    val PASS_KO = "KOfakepass1"
   }
 }

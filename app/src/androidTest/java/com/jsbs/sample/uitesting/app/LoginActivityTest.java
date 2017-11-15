@@ -27,9 +27,6 @@ import static org.hamcrest.Matchers.is;
 
 @LargeTest @RunWith(AndroidJUnit4.class) public class LoginActivityTest extends BaseActivityTest {
 
-  private static final String EMAIL = "santiago.berrocoso@gigigo.com";
-  private static final String PASS = "fakepass1";
-
   @Rule public ActivityTestRule<LoginActivity> mActivityTestRule =
       new ActivityTestRule<>(LoginActivity.class);
 
@@ -61,13 +58,13 @@ import static org.hamcrest.Matchers.is;
         childAtPosition(withClassName(is("android.support.design.widget.TextInputLayout")), 0),
         0)));
     viewInteractionEmail.perform(scrollTo(), click());
-    viewInteractionEmail.perform(scrollTo(), replaceText(EMAIL), closeSoftKeyboard());
+    viewInteractionEmail.perform(scrollTo(), replaceText(FakeConstants.getEMAIL_OK()), closeSoftKeyboard());
 
     // Find email password and set data
     ViewInteraction viewInteractionPassword = onView(allOf(withId(R.id.password), childAtPosition(
         childAtPosition(withClassName(is("android.support.design.widget.TextInputLayout")), 0),
         0)));
-    viewInteractionPassword.perform(scrollTo(), replaceText(PASS), closeSoftKeyboard());
+    viewInteractionPassword.perform(scrollTo(), replaceText(FakeConstants.getPASS_OK()), closeSoftKeyboard());
 
     // Find SignInButton
     ViewInteraction viewInteractionSignInButton = onView(
