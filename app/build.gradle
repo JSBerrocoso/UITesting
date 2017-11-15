@@ -47,6 +47,8 @@ dependencies {
 
   testImplementation "junit:junit:$rootProject.ext.junitVersion"
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+  androidTestImplementation 'com.agoda.kakao:kakao:1.0.1'
 }
 repositories {
   mavenCentral()
@@ -54,4 +56,5 @@ repositories {
     url 'https://maven.google.com/'
     name 'Google'
   }
+  jcenter()
 }
