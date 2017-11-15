@@ -34,11 +34,9 @@ class LoginActivityKakaoTest {
   @JvmField
   val rule = ActivityTestRule(LoginActivity::class.java)
 
-  val loginScreen = LoginScreen()
-
-  val successScreen = SuccessScreen()
-
-  val signUpScreen = LoginScreen()
+  private val loginScreen = LoginScreen()
+  private val successScreen = SuccessScreen()
+  private val signUpScreen = LoginScreen()
 
   @Test
   fun clickSignInButtonAfterFillingSignInForm_showProgressAndSuccessScreen() {

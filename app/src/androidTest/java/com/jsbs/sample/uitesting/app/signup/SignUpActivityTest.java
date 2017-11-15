@@ -77,4 +77,5 @@ import static org.hamcrest.Matchers.is;
             childAtPosition(childAtPosition(withId(android.R.id.content), 0), 0), isDisplayed()));
     viewInteractionSuccessText.check(matches(withText("Success!!!")));
   }
+  
 }
