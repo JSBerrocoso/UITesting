@@ -1,14 +1,16 @@
 # UITesting
 [![Kotlin version badge](https://img.shields.io/badge/kotlin-1.1.51-blue.svg)](http://kotlinlang.org/)
 
-This is a sample app to use espresso and others platforms to testing UI.
-The app show how to do Integration test with Espresso.
+This is a sample app to use espresso and others frameworks to testing UI.
+The app show how to do Integration test with Espresso, in Java, in Kotlin, and with other testing lib in Kotlin.
 
-The main screens was written in Kotlin, and the tests was written in Java and Kotlin to see the diferences
+The main screens was written in Kotlin. 
+The tests was written in Java, and in Kotlin, with this, We will see the diferences between languages.
 
 ### Introduction
-In this sample we have to show how we setup and config espresso test framework to record and run instrumentation tests.
-Also, we compare with another testing framework. In this case, [Kakao](https://github.com/agoda-com/Kakao/) by Agoda, written in kotlin, that it get a lot of benefits, readability, reusability and this is extensibleDSL.
+In this sample we have diferents feature branches, to show, how we setting up and config, espresso test framework, and how we record and run instrumentation tests.
+
+Also, we compare with another testing framework. In this case, [Kakao](https://github.com/agoda-com/Kakao/) library for testing, created by Agoda, written in kotlin, that it is get a lot of benefits, readability, reusability and this is extensibleDSL.
 
 ## Getting started
 This repository contains an Android application to do login or signin in a sample app.
@@ -28,23 +30,13 @@ This Application is based on four Activities:
 
 * ``ErrorActivity`` showing a error message.
 
+## Branches
+In this branches, we show who setting up espresso dependencies, record with espresso recorder, create test in kotlin and show diferents with Kakao lib. 
+* [feature/settings-espresso][branchSettingUpEspresso]
+* [feature/record-espresso-tests][branchRecordEspressoTest]
+* [feature/testing-with-espresso-kotlin][TestingWithEspressoinKotlin]
+* [feature/testing-with-kakao][TestingWithKakao]
 
-
-## Code style
-
-Here you can download and install the java codestyle.
-https://github.com/JSBerrocoso/java-code-styles
-
-## Documentation
-There are some links which can be useful to finish these tasks:
-
-* [Kata Super Heroes in Kotlin][kataSuperHeroesKotlin]
-* [Android Testing Support Library official documentation][androidTestingDocumentation]
-* [Espresso Cheat Sheet][espressoCheatSheet]
-* [Espresso Idling Resources][espressoIdlingResources]
-* [Espresso Custom Matchers][espressoCustomMatchers]
-* [Finding UI views][findingUIViews]
-* [Espresso Test Toolbar Title][toolbarMatcher]
 
 ## Libraries used in this project
 
@@ -54,7 +46,26 @@ There are some links which can be useful to finish these tasks:
 * [Android JUnit Runner](https://developer.android.com/reference/android/support/test/runner/AndroidJUnitRunner.html)
 * [Android JUnit Rules](https://developer.android.com/training/testing/junit-rules.html)
 * [Kotlin stdlib](https://kotlinlang.org/api/latest/jvm/stdlib/index.html)
+* [Kakao](https://github.com/agoda-com/Kakao/)
 
+
+## Code style
+Here you can download and install the java codestyle.
+https://github.com/JSBerrocoso/java-code-styles
+
+## Documentation
+There are some links which can be useful:
+
+* [Android Testing Support Library official documentation][androidTestingDocumentation]
+* [Espresso Cheat Sheet][espressoCheatSheet]
+* [Espresso Idling Resources][espressoIdlingResources]
+* [Testing codelab][testingCodeLab]
+* [Testing with Kotlin][testingWithKotlin]
+* [Kakao - how to make UI testing great again][kakaoHowtoMakeUITesting]
+* [Espresso Custom Matchers][espressoCustomMatchers]
+* [Finding UI views][findingUIViews]
+* [Kata Super Heroes in Kotlin][kataSuperHeroesKotlin]
+* [AdapterViews and Espresso][adaptersViewsAndEspresso]
 
 ## License
 
@@ -89,4 +100,17 @@ There are some links which can be useful to finish these tasks:
 [toolbarMatcher]: http://blog.sqisland.com/2015/05/espresso-match-toolbar-title.html
 [daggermock]: https://github.com/fabioCollini/DaggerMock
 [kataSuperHeroesKotlin]: https://github.com/Karumi/KataSuperHeroesKotlin
+[testingCodeLab]: https://goo.gl/h5cnMW
+[testingWithKotlin]: https://goo.gl/UzQSif
+[kakaoHowtoMakeUITesting]: https://goo.gl/bW9Ehi
+[adaptersViewsAndEspresso]: https://goo.gl/6Hb2ym
+
+[branchSettingUpEspresso]: https://github.com/JSBerrocoso/UITesting/tree/feature/settings-espresso
+[branchRecordEspressoTest]: https://github.com/JSBerrocoso/UITesting/tree/feature/record-espresso-tests
+[TestingWithEspressoinKotlin]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-espresso-kotlin
+[TestingWithKakao]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-kakao
+
+
+
+
 
