@@ -4,7 +4,7 @@
 This sample app is based on Espresso and others UI testing frameworks.
 The app shows how to do Integration test with Espresso, in Java, in Kotlin, and other testing Kotlin libs.
 
-Main activities are code in Kotlin. 
+Main activities were code in Kotlin. 
 As tests are code in Java, and in Kotlin, we can easily see differences between both languages.
 
 ### Introduction
