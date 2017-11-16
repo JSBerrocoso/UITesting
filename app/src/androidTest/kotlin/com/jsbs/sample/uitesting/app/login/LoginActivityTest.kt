@@ -120,7 +120,7 @@ class LoginActivityTest : BaseActivityTest() {
 
   companion object {
 
-    private val EMAIL = "santiago.berrocoso@gigigo.com"
+    val EMAIL = "santiago.berrocoso@gigigo.com"
     private val PASS = "fakepass1"
   }
 }
