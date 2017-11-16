@@ -10,7 +10,7 @@ The tests was written in Java, and in Kotlin, with this, We will see the diferen
 ### Introduction
 In this sample we have diferents feature branches, to show, how we setting up and config, espresso test framework, and how we record and run instrumentation tests.
 
-Also, we compare with another testing framework. In this case, [Kakao](https://github.com/agoda-com/Kakao/) library for testing, created by Agoda, written in kotlin, that it is get a lot of benefits, readability, reusability and this is extensibleDSL.
+Also, we compare with another testing framework. In this case, [Kakao][kakaoRepo] library for testing, created by Agoda, written in kotlin, that it is get a lot of benefits, readability, reusability and this is extensibleDSL.
 
 ## Getting started
 This repository contains an Android application to do login or signin in a sample app.
@@ -31,11 +31,13 @@ This Application is based on four Activities:
 * ``ErrorActivity`` showing a error message.
 
 ## Branches
-In this branches, we show who setting up espresso dependencies, record with espresso recorder, create test in kotlin and show diferents with Kakao lib. 
+In this branches, we show how setting up espresso dependencies, record with espresso recorder, create test in kotlin and show diferents with Kakao lib. 
 * [feature/settings-espresso][branchSettingUpEspresso]
-* [feature/record-espresso-tests][branchRecordEspressoTest]
-* [feature/testing-with-espresso-kotlin][TestingWithEspressoinKotlin]
-* [feature/testing-with-kakao][TestingWithKakao]
+we show how setting up espresso dependencies.
+* [feature/record-espresso-tests][branchRecordEspressoTest] we show how record with espresso recorder.
+* [feature/testing-with-espresso-kotlin][TestingWithEspressoinKotlin] We show how create UI Test in Kotlin.
+* [feature/testing-with-kakao][TestingWithKakao] We show how create UI Test with [Kakao][kakaoRepo] lib.
+* [feature/testing-with-espresso-kotlin-pageobject][TestingWithEspressoinKotlinPageObject] We show how create with Page Object Pattern UI tests in Kotlin.
 
 
 ## Libraries used in this project
@@ -46,7 +48,7 @@ In this branches, we show who setting up espresso dependencies, record with espr
 * [Android JUnit Runner](https://developer.android.com/reference/android/support/test/runner/AndroidJUnitRunner.html)
 * [Android JUnit Rules](https://developer.android.com/training/testing/junit-rules.html)
 * [Kotlin stdlib](https://kotlinlang.org/api/latest/jvm/stdlib/index.html)
-* [Kakao](https://github.com/agoda-com/Kakao/)
+* [Kakao][kakaoRepo]
 
 
 ## Code style
@@ -66,6 +68,7 @@ There are some links which can be useful:
 * [Finding UI views][findingUIViews]
 * [Kata Super Heroes in Kotlin][kataSuperHeroesKotlin]
 * [AdapterViews and Espresso][adaptersViewsAndEspresso]
+* [CleanGUITestArchitecture][CleanGUITestArchitectureRepo]
 
 ## License
 
@@ -104,11 +107,14 @@ There are some links which can be useful:
 [testingWithKotlin]: https://goo.gl/UzQSif
 [kakaoHowtoMakeUITesting]: https://goo.gl/bW9Ehi
 [adaptersViewsAndEspresso]: https://goo.gl/6Hb2ym
+[CleanGUITestArchitectureRepo]: https://github.com/sebaslogen/CleanGUITestArchitecture
+[kakaoRepo]: https://github.com/agoda-com/Kakao
 
 [branchSettingUpEspresso]: https://github.com/JSBerrocoso/UITesting/tree/feature/settings-espresso
 [branchRecordEspressoTest]: https://github.com/JSBerrocoso/UITesting/tree/feature/record-espresso-tests
 [TestingWithEspressoinKotlin]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-espresso-kotlin
 [TestingWithKakao]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-kakao
+[TestingWithEspressoinKotlinPageObject]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-espresso-kotlin-pageobject
 
 
 
