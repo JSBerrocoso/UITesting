@@ -1,16 +1,16 @@
 # UITesting
 [![Kotlin version badge](https://img.shields.io/badge/kotlin-1.1.51-blue.svg)](http://kotlinlang.org/)
 
-This is a sample app to use espresso and others frameworks to testing UI.
-The app show how to do Integration test with Espresso, in Java, in Kotlin, and with other testing lib in Kotlin.
+This sample app is based on Espresso and others UI testing frameworks.
+The app shows how to do Integration test with Espresso, in Java, in Kotlin, and other testing Kotlin libs.
 
-The main screens was written in Kotlin. 
-The tests was written in Java, and in Kotlin, with this, We will see the diferences between languages.
+Main activities are code in Kotlin. 
+As tests are code in Java, and in Kotlin, we can easily see differences between both languages.
 
 ### Introduction
-In this sample we have diferents feature branches, to show, how we setting up and config, espresso test framework, and how we record and run instrumentation tests.
+In this sample we have different "feature branches", showing, how we'd set up and "config" espresso test framework, as well as how to record and run instrumentation tests.
 
-Also, we compare with another testing framework. In this case, [Kakao][kakaoRepo] library for testing, created by Agoda, written in kotlin, that it is get a lot of benefits, readability, reusability and this is extensibleDSL.
+Aditionaly, we will compare this test with another testing frameworks. For example, [Kakao][kakaoRepo] testing library, created by Agoda, in Kotlin, that brings a lot of benefits, as readability, reusability and is extensibleDSL.
 
 ## Getting started
 This repository contains an Android application to do login or signin in a sample app.
