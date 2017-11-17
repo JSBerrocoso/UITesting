@@ -1,6 +1,8 @@
 # UITesting
 [![Kotlin version badge](https://img.shields.io/badge/kotlin-1.1.51-blue.svg)](http://kotlinlang.org/)
 [![Build Status](https://travis-ci.org/JSBerrocoso/UITesting.svg?branch=master)](https://travis-ci.org/JSBerrocoso/UITesting)
+[![CircleCI](https://circleci.com/gh/JSBerrocoso/UITesting/tree/develop.svg?style=svg)](https://circleci.com/gh/JSBerrocoso/UITesting)
+[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
 
 This sample app is based on Espresso and others UI testing frameworks.
 The app shows how to do Integration test with Espresso, in Java, in Kotlin, and other testing Kotlin libs.
