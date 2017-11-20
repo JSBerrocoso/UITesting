@@ -1,6 +1,8 @@
 package com.jsbs.sample.uitesting.app.login.pageobject
 
 import android.support.test.espresso.Espresso
+import android.support.test.espresso.ViewInteraction
+import android.support.test.espresso.action.ViewActions
 import android.support.test.espresso.assertion.ViewAssertions
 import android.support.test.espresso.matcher.ViewMatchers
 import android.support.test.espresso.matcher.ViewMatchers.withId
@@ -23,6 +25,14 @@ open class BasePageObject {
 
   class InvalidPageException(message: String) : RuntimeException(message)
 
+  fun completeEdittextField(data: String, id: Int) {
+    Espresso.onView(withId(id)).perform(ViewActions.scrollTo(), ViewActions.replaceText(data))
+  }
+
+
+  fun onViewWith(id: Int): ViewInteraction {
+    return Espresso.onView(withId(id))
+  }
 
   fun sleepFakeTime() {
     try {
