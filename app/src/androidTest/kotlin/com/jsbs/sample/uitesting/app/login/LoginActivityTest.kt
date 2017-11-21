@@ -20,6 +20,7 @@ package com.jsbs.sample.uitesting.app.login
 import android.content.Context
 import android.support.test.InstrumentationRegistry
 import android.support.test.espresso.Espresso.onView
+import android.support.test.espresso.IdlingRegistry
 import android.support.test.espresso.action.ViewActions.click
 import android.support.test.espresso.action.ViewActions.closeSoftKeyboard
 import android.support.test.espresso.action.ViewActions.replaceText
@@ -42,7 +43,6 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.util.jar.Pack200.Packer.PASS
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)
@@ -56,6 +56,8 @@ class LoginActivityTest : BaseActivityTest() {
   @Before
   fun setup() {
     this.instrumentationCtx = InstrumentationRegistry.getContext()
+    IdlingRegistry.getInstance().register( testRule.getActivity().getEspressoIdlingResources())
+
   }
 
   @Test
@@ -104,14 +106,14 @@ class LoginActivityTest : BaseActivityTest() {
                     childAtPosition(withId(R.id.scroll_login_form), 0)), 2)))
     viewInteractionSignInButton.perform(scrollTo(), click())
 
-    // Added a sleep statement to match the app's execution delay.
-    // The recommended way to handle such scenarios is to use Espresso idling resources:
-    // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-    try {
-      Thread.sleep(FakeConstants.SLEEP_TIME_MILLIS)
-    } catch (e: InterruptedException) {
-      e.printStackTrace()
-    }
+//    // Added a sleep statement to match the app's execution delay.
+//    // The recommended way to handle such scenarios is to use Espresso idling resources:
+//    // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+//    try {
+//      Thread.sleep(FakeConstants.SLEEP_TIME_MILLIS)
+//    } catch (e: InterruptedException) {
+//      e.printStackTrace()
+//    }
 
     // Check if the Success screen is displayed
     val viewInteractionSuccessView = onView(
@@ -119,5 +121,11 @@ class LoginActivityTest : BaseActivityTest() {
             childAtPosition(withId(android.R.id.content), 0), 0),
             isDisplayed()))
     viewInteractionSuccessView.check(matches(withText("Success!!!")))
+  }
+
+  companion object {
+
+    val EMAIL = "santiago.berrocoso@gigigo.com"
+    private val PASS = "fakepass1"
   }
 }

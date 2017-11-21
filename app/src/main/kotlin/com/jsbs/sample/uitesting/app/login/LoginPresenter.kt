@@ -1,4 +1,6 @@
-/*
+package com.jsbs.sample.uitesting.app.login
+
+/**
  * Copyright 2017 JSBerrocoso
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,24 +14,31 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *
  */
 
-package com.jsbs.sample.uitesting.app.login
-
 import android.os.Handler
+import android.support.test.espresso.idling.CountingIdlingResource
 import com.jsbs.sample.uitesting.app.FakeConstants
 
+
 class LoginPresenter(private var loginView: LoginContract.View) : LoginContract.UserActionListener {
+
+  // this idling resource will be used by Espresso to wait for and synchronize with RetroFit Network call
+  var espressoTestIdlingResource = CountingIdlingResource("Network_Call")
+
 
   override fun loginButtonClick(name: String, password: String) {
 
     if (isValidCredentials(name, password)) {
       loginView.showProgress(true)
 
+      espressoTestIdlingResource.increment()
+
       val handler = Handler()
       handler.postDelayed({
         loginView.showProgress(false)
+        espressoTestIdlingResource.decrement()
+
         loginView.showLoginSuccessScreen()
       }, FakeConstants.SLEEP_TIME_MILLIS)
     } else {
@@ -51,6 +60,10 @@ class LoginPresenter(private var loginView: LoginContract.View) : LoginContract.
       loginView.showInvalidPassword()
     }
     return result;
+  }
+
+  public fun getIdlingResources():CountingIdlingResource{
+    return espressoTestIdlingResource;
   }
 }
 
