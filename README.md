@@ -41,6 +41,7 @@ we show how setting up espresso dependencies.
 * [feature/testing-with-espresso-kotlin][TestingWithEspressoinKotlin] We show how create UI Test in Kotlin.
 * [feature/testing-with-kakao][TestingWithKakao] We show how create UI Test with [Kakao][kakaoRepo] lib.
 * [feature/testing-with-espresso-kotlin-pageobject][TestingWithEspressoinKotlinPageObject] We show how create with Page Object Pattern UI tests in Kotlin.
+* [feature/testing-with-espresso-kotlin-idle-resources][TestingWithEspressoinKotlinIdleResources] We show how create with UI tests in Kotlin, and idle resources.
 
 
 ## Libraries used in this project
@@ -117,6 +118,7 @@ There are some links which can be useful:
 
 [branchSettingUpEspresso]: https://github.com/JSBerrocoso/UITesting/tree/feature/settings-espresso
 [branchRecordEspressoTest]: https://github.com/JSBerrocoso/UITesting/tree/feature/record-espresso-tests
+[TestingWithEspressoinKotlinIdleResources]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-espresso-kotlin-idle-resources
 [TestingWithEspressoinKotlin]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-espresso-kotlin
 [TestingWithKakao]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-kakao
 [TestingWithEspressoinKotlinPageObject]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-espresso-kotlin-pageobject
