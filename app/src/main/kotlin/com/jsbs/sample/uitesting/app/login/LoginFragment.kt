@@ -17,6 +17,7 @@ package com.jsbs.sample.uitesting.app.login
  */
 
 import android.os.Bundle
+import android.support.test.espresso.idling.CountingIdlingResource
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.OnClickListener
@@ -105,6 +106,10 @@ class LoginFragment : BaseFragment(), LoginContract.View, OnClickListener {
 
   override fun enableClickableViews(enableView: Boolean) {
     signButton.isEnabled = enableView
+  }
+
+  public fun getEspressoIdlingResources(): CountingIdlingResource {
+    return actionListener.espressoTestIdlingResource
   }
 
 }

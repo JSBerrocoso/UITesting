@@ -17,15 +17,23 @@ package com.jsbs.sample.uitesting.app.login
  */
 
 import android.os.Bundle
+import android.support.test.espresso.idling.CountingIdlingResource
 import com.jsbs.sample.uitesting.app.BaseActivity
 import com.jsbs.sample.uitesting.app.R.layout
 
 class LoginActivity : BaseActivity(){
 
+  lateinit var fragment: LoginFragment
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(layout.activity_login)
 
-    startFragment(LoginFragment.newInstance())
+    fragment = LoginFragment.newInstance()
+    startFragment(fragment)
+  }
+
+  fun getEspressoIdlingResources(): CountingIdlingResource {
+    return fragment.getEspressoIdlingResources()
   }
 }

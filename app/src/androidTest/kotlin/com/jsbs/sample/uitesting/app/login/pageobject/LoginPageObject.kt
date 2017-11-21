@@ -14,7 +14,7 @@ class LoginPageObject : BasePageObject {
     completeEdittextField(email, R.id.email)
     completeEdittextField(pass, R.id.password)
     pressSignUpView()
-    sleepFakeTime()
+//    sleepFakeTime()
     return SuccessPageObject()
   }
 

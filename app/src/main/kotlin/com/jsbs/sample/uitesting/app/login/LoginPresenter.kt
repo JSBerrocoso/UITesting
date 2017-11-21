@@ -17,17 +17,28 @@ package com.jsbs.sample.uitesting.app.login
  */
 
 import android.os.Handler
+import android.support.test.espresso.idling.CountingIdlingResource
+
+
 
 class LoginPresenter(private var loginView: LoginContract.View) : LoginContract.UserActionListener {
+
+  // this idling resource will be used by Espresso to wait for and synchronize with RetroFit Network call
+  var espressoTestIdlingResource = CountingIdlingResource("Network_Call")
+
 
   override fun loginButtonClick(name: String, password: String) {
 
     if (isValidCredentials(name, password)) {
       loginView.showProgress(true)
 
+      espressoTestIdlingResource.increment()
+
       val handler = Handler()
       handler.postDelayed({
         loginView.showProgress(false)
+        espressoTestIdlingResource.decrement()
+
         loginView.showLoginSuccessScreen()
       }, 3000)
     } else {
@@ -49,6 +60,10 @@ class LoginPresenter(private var loginView: LoginContract.View) : LoginContract.
       loginView.showInvalidPassword()
     }
     return result;
+  }
+
+  public fun getIdlingResources():CountingIdlingResource{
+    return espressoTestIdlingResource;
   }
 }
 

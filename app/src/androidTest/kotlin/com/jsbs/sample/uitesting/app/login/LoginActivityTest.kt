@@ -19,6 +19,7 @@ package com.jsbs.sample.uitesting.app.login
 import android.content.Context
 import android.support.test.InstrumentationRegistry
 import android.support.test.espresso.Espresso.onView
+import android.support.test.espresso.IdlingRegistry
 import android.support.test.espresso.action.ViewActions.click
 import android.support.test.espresso.action.ViewActions.closeSoftKeyboard
 import android.support.test.espresso.action.ViewActions.replaceText
@@ -101,14 +102,14 @@ class LoginActivityTest : BaseActivityTest() {
                     childAtPosition(withId(R.id.scroll_login_form), 0)), 2)))
     viewInteractionSignInButton.perform(scrollTo(), click())
 
-    // Added a sleep statement to match the app's execution delay.
-    // The recommended way to handle such scenarios is to use Espresso idling resources:
-    // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-    try {
-      Thread.sleep(3000)
-    } catch (e: InterruptedException) {
-      e.printStackTrace()
-    }
+//    // Added a sleep statement to match the app's execution delay.
+//    // The recommended way to handle such scenarios is to use Espresso idling resources:
+//    // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+//    try {
+//      Thread.sleep(3000)
+//    } catch (e: InterruptedException) {
+//      e.printStackTrace()
+//    }
 
     // Check if the Success screen is displayed
     val viewInteractionSuccessView = onView(
@@ -122,5 +123,20 @@ class LoginActivityTest : BaseActivityTest() {
 
     val EMAIL = "santiago.berrocoso@gigigo.com"
     private val PASS = "fakepass1"
+  }
+
+
+  /**
+   * Prepare your test fixture for this test. In this case we register an IdlingResources with
+   * Espresso. IdlingResource resource is a great way to tell Espresso when your app is in an
+   * idle state. This helps Espresso to synchronize your test actions, which makes tests significantly
+   * more reliable.
+   */
+  @Before
+  fun registerIdlingResource() {
+
+    // registering MainActivity's idling resource for enabling Espresso sync with MainActivity's background threads
+//    Espresso.registerIdlingResources(testRule.getActivity().getEspressoIdlingResources())
+    IdlingRegistry.getInstance().register( testRule.getActivity().getEspressoIdlingResources())
   }
 }
