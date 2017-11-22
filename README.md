@@ -33,6 +33,13 @@ This Application is based on four Activities:
 
 * ``ErrorActivity`` showing a error message.
 
+## Presentations
+
+* [SpeakerDeck][presentationSpeackDeck]
+
+## Video
+* [Video][videoYoutube]
+
 ## Branches
 In this branches, we show how setting up espresso dependencies, record with espresso recorder, create test in kotlin and show diferents with Kakao lib. 
 * [feature/settings-espresso][branchSettingUpEspresso]
@@ -122,6 +129,8 @@ There are some links which can be useful:
 [TestingWithEspressoinKotlin]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-espresso-kotlin
 [TestingWithKakao]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-kakao
 [TestingWithEspressoinKotlinPageObject]: https://github.com/JSBerrocoso/UITesting/tree/feature/testing-with-espresso-kotlin-pageobject
+[presentationSpeackDeck]: https://speakerdeck.com/jsberrocoso/ui-testing-plus-kakao
+[videoYoutube]: https://www.youtube.com/watch?v=RlvxtSK_WEU
 
 
 
